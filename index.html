@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Bridge</title>
+</head>
+<body>
+    <section>
+        <img src="./images/bg.jpg" id="bg">
+        <img src="./images/moon.png" id="moon">
+        <img src="./images/bridge.png" id="bridge">
+        <h2 id="text">Bridge</h2>
+    </section>
+
+    <div class="container">
+        <p>
+            Most je konstrukce postavená tak, aby přestoupila přes fyzickou překážku (jako je vodní plocha, údolí, silnice nebo železnice), aniž by blokovala cestu pod ní.
+            Je konstruován za účelem zajištění průchodu přes překážku, kterou je obvykle něco, co je jinak obtížné nebo nemožné překonat.
+            Existuje mnoho různých konstrukcí mostů, z nichž každý slouží určitému účelu a je použitelný v různých situacích. Konstrukce mostů se liší v závislosti
+            na faktorech, jako jsou: funkce mostu, povaha terénu, kde je most postaven a ukotven, a materiál použitý k jeho výrobě
+            a dostupné prostředky na jeho vybudování. V současnosti se za most považuje překlenutí překážky delší než 2,0 m. Kratší je považováno za <span>propustek</span>.
+        </p>
+        <h3>Historie</h3>
+        <p>
+            Nejstarší mosty byly pravděpodobně vyrobeny z <span>padlých stromů</span> a <span>nášlapných kamenů</span>.
+            Neolitičtí lidé stavěli mosty přes mokřady. Most Arkadiko (pocházející ze 13. století př. n. l., na Peloponésu) je jedním z nejstarších obloukových
+            mostů, který stále existuje a používá se.
+        </p>
+        <h3>Druhy mostů</h3>
+        <p>
+            Mosty lze rozdělit několika různými způsoby. Mezi běžné kategorie patří <span>typ použitých konstrukčních prvků</span> (visuté, pilíře, opěry,...),
+            podle toho, <span>co nesou</span> (silnice, chodník, železniční přejezd,..),
+            zda jsou <span>pevné</span> nebo <span>pohyblivé</span>, a podle <span>použitých materiálů</span> (železobeton, dřevo, sklo,...).
+        </p>
+    </div>
+    <div class="footer">
+        <h4 class="nadpis"><span class="end">P2, Nazar Samborskyj</span></h4>
+    </div>
+
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let bridge = document.getElementById("bridge");
+        let text = document.getElementById("text");
+
+        window.addEventListener("scroll", function(){
+            var value  = window.scrollY; 
+            bg.style.top = value * 0.5 + "px";
+            bridge.style.top = value * 1 + "px";
+            text.style.top = value * 0.6 + "px";
+        })
+
+        document.addEventListener("mousemove", function(e){ 
+            bg.style.width = 100 + e.pageX/200 + "%";
+            bg.style.height = 100 + e.pageX/150 + "%";
+
+            moon.style.left = 100 + e.pageX/2 + "px";
+        })
+    </script>
+</body>
+</html>
