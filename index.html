@@ -49,13 +49,15 @@
 
         window.addEventListener("scroll", function(){
             var value  = window.scrollY; 
+
             bg.style.top = value * 0.5 + "px";
-            moon.style.left = value * 0,3 + "vh";
+            moon.style.left = -value * 0.3 + "vh";
             bridge.style.top = value * 1 + "px";
-            text.style.top = value * 0.6 + "px";
+            text.style.top = value * 0.65 + "px";
         })
 
         document.addEventListener("mousemove", function(e){ 
+
             bg.style.width = 100 + e.pageX/200 + "%";
             bg.style.height = 100 + e.pageX/150 + "%";
         })
